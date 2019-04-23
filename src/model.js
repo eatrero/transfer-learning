@@ -75,7 +75,6 @@ export function stopPredicting() {
 }
 
 export async function predict(webcam, mobilenet, model, callback) {
-  //ui.isPredicting();
   isPredicting = true;
   while (isPredicting) {
     const predictedClass = tf.tidy(() => {

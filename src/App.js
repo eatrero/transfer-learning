@@ -121,6 +121,7 @@ class App extends Component {
       outputs: layer.output,
     });
 
+    // Warm up the model
     tf.tidy(() => mobilenet.predict(this.webcam.capture()));
 
     this.featureExtract = tf.model({
